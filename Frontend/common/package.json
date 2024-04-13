@@ -1,0 +1,28 @@
+{
+  "name": "common",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "rimraf tsconfig.tsbuildinfo  && tsc"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@mui/material": "^5.14.18",
+    "@types/react": "^18.0.2",
+    "@types/react-dom": "^18.0.2",
+    "@types/reactstrap": "^8.7.2"
+  },
+  "dependencies": {
+    "moment": "^2.29.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^5.0.4"
+  },
+  "files": [
+    "/dist"
+  ]
+}
