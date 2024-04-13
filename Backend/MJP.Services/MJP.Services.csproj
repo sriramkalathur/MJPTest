@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+     <ImplicitUsings>false</ImplicitUsings>
+    
+  </PropertyGroup>
+
+   
+ 
+<ItemGroup>
+     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+     <PackageReference Include="PdfSharpCore" Version="1.3.63" /> 
+    
+  </ItemGroup>
+
+   
+ 
+<ItemGroup>
+  <ProjectReference Include="..\MJP.Entities\MJP.Entities.csproj" />
+  <ProjectReference Include="..\MJP.Infrastructure\MJP.Infrastructure.csproj" />
+</ItemGroup>
+</Project>
