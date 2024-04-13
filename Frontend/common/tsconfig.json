@@ -1,0 +1,48 @@
+{
+
+  "compilerOptions": {
+    "composite": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+
+   
+    "declaration": true,
+  
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+ 
+    "resolveJsonModule": false,
+    "outDir": "./dist",
+    "declarationMap": true,
+    "strictNullChecks": false,
+    "sourceMap": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "jsx": "react",
+    
+    "baseUrl": ".",
+    "rootDir": "src",
+    "preserveSymlinks": false,
+   
+  },
+  "exclude": [
+    "node_modules",
+    "Content_1/*",
+   
+  ],
+
+  "references": [],
+ 
+  "include": [
+    "src/"
+  ]
+}

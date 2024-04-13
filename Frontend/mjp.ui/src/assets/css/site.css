@@ -1,0 +1,2125 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+body {
+    font-size: 0.9rem !important;
+   
+}
+ 
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+ 
+/* div table implementation */
+.table {
+    /* Outer border */  
+    border: 1px solid rgba(0,0,0,.125);
+    color: inherit;
+    
+}
+
+.table.white {
+    background-color: white;
+}
+
+
+.onlyLeftBorder {
+    border-left: solid 2px lightgray;
+}
+
+.card.minimum {
+    padding:5px;
+}   
+ 
+ 
+.pl-100 {
+    padding-left: 100px;
+}
+
+.lightbg {
+    background-color: lightyellow;
+}
+.table .subTable {
+    /* For sub table draw only left border and clear the padding */
+    border: none;
+    border-left: 1px solid rgba(0,0,0,.125);
+    padding: 0px;
+}
+
+.table .row:hover {
+    background-color:  rgb(196, 218, 236);   
+}
+
+.row .subTable
+{
+    padding: 0px !important;
+}
+
+.table .row:last-child,
+.subTable .row:last-child{
+    /* Don't draw border for the last item in sub table */
+    border: none;
+}
+
+.table .row  {
+    /* Customize the bootstrap margin and draw only bottom margin for row in table */
+    margin: 0px;  
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    /* Give padding only for top & bottom. For left & right, it is already covered in 1, col-2 etc */
+    padding-top: 7px;
+    padding-bottom:7px;
+}
+
+
+.table .smallText {
+    font-size: 0.9em;
+}
+
+.table .row [class*="col-"] {
+    padding: 3px 8px;
+    padding-left: 8px;
+}
+
+
+
+.row.nogutters [class*="col-"]{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.table .row [class*="col-"]:first-child {
+    /* When col is used inside a table and row we need a cell padding.
+    But we don't need padding when it is used in row */
+    padding-left: 8px !important;
+}
+
+/* col will have padding left. So remove the padding only for the first child
+when it is applied in row */
+/* .row [class*="col-"]:first-child {
+    margin:0px;
+    padding-left: 0px;
+} */
+
+.pdLeft0 {
+    padding-left: 0px !important;
+}
+
+.section .row [class*="col-"] {
+    padding: 3px 8px;
+    
+}
+
+
+/* table implementaion */
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+
+/* Sticky header & column */
+/* Added by Sriram */
+
+  .sticky-header {
+    /* The background color of this should match with the header color of
+    the item and z-index should be high.So it will reamin on top and other
+    items will move down when scrolled */
+    height: 45px;
+    min-height: 45px;
+    position: sticky;
+    position: -webkit-sticky;
+    /* This should have  solid abckground color without alpha */
+    background-color: #f8f8f8 !important;
+    top: 0;
+    z-index:9999 !important;
+  }
+  
+  .sticky-col-left {
+    position: sticky;
+    left: 0;
+ 
+    /* Set background color when stick col is applied with header.This should have  solid abckground color without alpha */
+    background-color: white !important;
+
+    z-index: 999 !important;
+  }
+
+  .list-group-item-action:hover .sticky-col-left {
+      /* Set background color when stick col is applied with header.This should have  solid abckground color without alpha */
+    background-color: #f8f9fa !important;
+    /* This z-index should be greater than csticky-col-left so that it appears frozedn */
+  
+  }
+ 
+
+  .row.header { 
+     background-color:#dfe8ff !important;
+  } 
+
+  .header .sticky-col-left {
+     /* Set background color when stick col is applied with header.This should have  solid abckground color without alpha */
+     background-color: #f8f8f8 !important;
+     /* This z-index should be greater than csticky-col-left so that it appears frozedn */
+     z-index: 999 !important;
+  }
+  
+  /* Sticky ends */
+
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.border-left {
+    border-left: 1px solid #e5e5e5;
+  }
+
+  
+  .border-right {
+    border-right: 1px solid #e5e5e5;
+  }
+
+
+  .noBorder {
+      border: none !important;
+  }
+  
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+ 
+
+
+.box {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+
+.sideMenu {
+
+    padding-top:20px;
+    background-color:#98d7eb;
+    width: 200px;
+    height:100%;
+}
+
+.sideMenu .nav-link {
+   color: #98d7eb;
+}
+
+
+.titleBar.popup {
+    background-color: rgb(27, 112, 165);
+    color: white;
+}
+
+.titleBar {
+    /* padding-bottom: 20px; */
+    letter-spacing: 1.5px;
+   
+    vertical-align: middle;
+    /*padding-top: 0px !important; */
+    /*padding-bottom: 0px !important; */    
+    /* color: white; */
+    padding-left: 20px; 
+    padding-right: 20px;  
+   
+    color: #152164;
+    /* background-image: linear-gradient(to bottom,   #123456, teal ); */
+    background-color: whitesmoke;
+    border-bottom: solid 1px lightblue; 
+}
+
+  
+.pl-300 {
+    padding-left:100px;
+}
+.titleBar.teal { 
+    background-color: dodgerblue !important;
+}
+
+hr {
+margin-top: 0.5rem;
+margin-bottom: 0.5rem;
+}
+
+.multiselect-options {
+    border: 1px solid #e2e2e2;
+    background-color: white;
+    max-height: 200px;
+    
+} 
+
+/* Shows the selected items in text*/
+.multiselect .multiselect-selected-text {
+    /* When the txt exceeds show as ...*/
+    padding-right: 20px;
+    min-width: 250px;
+    max-width: 250px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden; 
+    height: 20px;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+
+.multi-select-options-list .multi-select-option {
+    padding-left: 5px;
+}
+
+select .filter {
+    padding-top: 5px !important;
+    padding-bottom: 10px !important;
+    border: solid 1px #e2e2e2 !important;
+}
+/* Mutltiselect check box styles*/
+
+
+.multi-select-options-list {
+    position: fixed;
+    z-index: 9999;
+    padding: 5px;
+    width: 200px;
+    border: solid 1px #e2e2e2 !important;
+    background-color: white;
+}
+
+.input-field-label {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.col-0-25 {
+    width: 2.08333%;
+}
+
+.col-0-75 {
+    width: 6.24999%;
+}
+
+.col-0-5 {
+    width: 4.16667%;
+}
+
+.col-1-25 {
+    width: 10.416%;
+}
+
+.col-1-5 {
+    width: 12.5%;
+}
+
+.col-1-75 {
+    width: 14.58333%;
+}
+
+
+
+.col-2-5 {
+    width: 20.83333%;
+}
+
+.col-2-25 {
+    width: 18.75%;
+}
+
+
+.col-2-75 {
+    width: 22.91667%
+}
+
+
+.col-3-5 {
+    width: 29.16667%;
+}
+
+
+.col-3-75 {
+    width: 31.25%;
+}
+
+.col-4-5 {
+    width: 37.5%;
+}
+
+.col-4-25 {
+    width: 35.416525%;
+}
+
+.col-5-5 {
+    width: 45.83333%;
+}
+
+.col-5-25 {
+    width: 43.749825%;
+}
+
+.col-6-5 {
+    width: 54.16667%;
+}
+
+
+.col-6-75 {
+    width: 56.249775%;
+}
+
+.col-7-5 {
+    width: 62.5%;
+}
+
+
+.col-7-75 {
+    width: 64.58%;
+}
+
+
+.col-8-5 {
+    width: 70.83333%;
+}
+
+.col-8-25 {
+    width: 68.75%;
+}
+
+.col-9-5 {
+    width: 79.16667%;
+}
+
+
+.col-9-75 {
+    width: 81.2499675%;
+}
+
+.col-10-5 {
+    width: 87.5%;
+}
+
+.col-10-25 {
+    width: 85.41653%;
+}
+
+.col-11-5 {
+    width: 95.8333%;
+}
+
+
+
+.col-7-25 {
+    width: 60.416667%;
+}
+
+.col-4-75 {
+    width: 39.583333%;
+}
+
+
+.col-4-25 {
+    width: 35.416667%;
+}
+
+.col-3-25 {
+    width: 27.083333%;
+}
+
+
+/* Left nav bar */
+
+.pdTop20 {
+    padding-top: 20px;
+}
+
+/* Navigation Menu */
+/* ---------------------------- */
+
+/* Add a black background color to the top navigation */
+
+.topnav {
+
+    color: white;
+    background-color: teal;
+    border-top:  solid 1px white;
+}
+
+
+
+.menu {
+    position: relative;
+    display: inline-block;
+    cursor:hand;
+  }
+  
+
+
+
+.menu a {
+  color: white;
+}
+
+
+.menu-content {
+    display: none;
+    position: absolute;
+    top:25px;
+    left:10px;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 2px;
+    z-index: 1;
+}
+
+
+  .menu-content a {
+    color: black;
+    display: block;
+
+    padding: 5px;
+    padding-left: 10px;
+    border-bottom: solid 1px #efefef;
+    text-decoration: none;
+  }
+
+
+  .menu-content a:hover {
+    color: cadetblue;  
+  }
+
+
+  .menuItem {
+    border-right: solid 1px white;
+  }
+
+  .subtitle.teal {
+    color: teal;
+  }
+  
+
+
+  .navmenubar {
+     background-color: rgb(27, 112, 165);
+    padding-top: 8px !important;
+  
+    padding-bottom: 12px !important;
+    border-bottom: solid 1.5px lightblue;
+    border-left: solid 1.5px lightblue;
+    border-right: solid 1.5px lightblue;
+   
+  }
+
+  .menu:hover .menu-content {
+    display: block;
+  }
+
+
+.pd3 {
+    padding: 3px;
+}
+
+
+
+/* Style the list */
+.breadcrumb {
+ 
+ 
+    margin-bottom: 8px;
+    padding: 5px;
+    padding-left: 10px;
+    list-style: none;
+    background-color: white;
+    border-top: solid 0.5px rgba(0,0,0,0.2);
+    border-bottom: solid 0.5px rgba(0,0,0,0.2);
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+    font-weight:bold;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li + li:before {
+    padding: 8px;
+    color: black;
+    content: ">";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+/* ------------------------- */
+
+.bodyContent {
+    padding-top:10px;
+    margin-top: 5px;
+   
+    padding: 5px;
+    
+    min-height:  450px;
+    background-color: white;
+    border: solid 1px rgba(0, 0, 0, 0.125);
+}
+
+ 
+.pagetitle {
+   
+  padding-top: 0.4rem; 
+  padding-bottom: 0.2rem;
+  
+}
+
+.pagecontent {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.pageHeader {
+    font-size: 1.15em;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    padding: 6px 0px;
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+/* Row for custom tables */
+.aligncenter {
+    text-align: center;
+  }
+
+.energyLogo{
+    text-align: center;
+}
+
+/* div[class*="col-"]  {
+    padding-left: 10px;
+    padding-right: 10px;} */
+
+div[class*="col-"] .nogutters {
+    padding: 0px;
+    margin: 0px;
+
+    padding-right: 0px;
+    padding-left: 0px;
+    
+}
+
+/* No margins/padding */
+.row .nogutters {
+    padding: 0px;
+    margin: 0px;
+
+    padding-right: 0px;
+    padding-left: 0px;   
+}
+
+
+.row {
+    margin: 0px;
+}
+
+/* Our custom Row header*/
+.customrow .header {
+    background-color: slategrey;
+    color: white;
+    font-weight: 100;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+
+.message {
+    letter-spacing: 1.25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Our custom Row Item*/
+.customrow .item {
+    
+    padding: 5px;
+    border-bottom: solid thin lightblue;
+}
+
+.loadingProgress {
+
+    padding: 10px; 
+    font-weight: bold;
+}
+
+/* Item in a selected row */
+customrow ,.selected .item {
+    background-color: #e6f2ff;
+}
+
+
+
+
+.subHeader {
+    
+    font-size: 0.90em;
+    color: slategrey;
+    font-weight: bolder;
+}
+
+
+
+.pdTopBottom10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.iconButton {
+    font-size: 17px !important;
+    border: solid 1px cadetblue;
+    cursor: hand;
+    padding: 3px;
+    border-radius: 3px;
+    color: slategrey;
+}
+
+
+.iconButton.small {
+    font-size: 12px;;
+}
+    
+
+
+.iconButton.delete {
+    font-size: 15px !important;
+    border: none !important;
+    color: #dc3545;
+}
+
+.row .form-group {
+    padding-bottom: 5px;
+    padding-top:  5px;
+    margin-bottom: 0px;
+}
+
+.field-validation-error{
+    color: #dc3545;
+   
+}
+
+.invalid-feedback {
+    /* input form Error messages */
+    font-size: 12px;
+}
+
+input.form-control.is-invalid {
+    /* The error icon appearing for invalid fields. Adjusted to appear correct to
+    the dropdown */
+    background-position: right 0.5em center;
+}
+
+
+
+select.form-control.is-invalid {
+    /* The error icon appearing for invalid fields. Adjusted to appear correct to
+    the dropdown */
+    background-position: right 1.1em center;
+}
+
+
+.alert {
+    margin-bottom:  0px;
+    padding: 0.5rem 0.75rem;
+}
+
+.alert .close{
+    font-size: 1.25rem;
+}
+
+
+.alert-dismissible .close {
+    padding: 0.5rem 0.5rem;
+}
+
+
+.version {
+    font-size: 10px;
+}
+
+.inputgroup{
+    padding-top: 10px;
+}
+
+
+
+.iconButton:hover{
+    background-color:aliceblue;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.right-border {
+    border-right: solid 1px grey;
+}
+
+
+.left-border {
+    border-left: solid 1px grey;
+}
+
+.pd-left50 {
+    padding-left: 50px;
+}
+
+.exceedsThreshold {
+    color:red;
+}
+
+.meterReading {
+    text-align:right;
+    padding-right: 10px;
+}
+
+.readingNA {
+    color: red;
+    cursor: hand;
+    text-align: right;
+}
+
+.form-control-small {
+    margin-top: 5px;
+}
+
+
+.input-group .label {
+    vertical-align: middle;
+    padding-top:8px;
+}
+
+.input-control {
+  
+    padding: 0.2em 0.6em;
+  
+    text-overflow: ellipsis;
+  
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
+
+/* Override the big font size */
+select.form-control {
+    height: inherit !important;
+}
+
+input.form-control {
+    height: inherit !important;
+    padding: 0.4rem;
+}
+
+/* Form control when applied to button*/
+button.input-control {
+    background-color:lightskyblue;
+    color: white;
+    cursor: pointer;
+
+    padding: 10px;
+   
+}
+
+.tabledisplay {
+    display: table;
+}
+
+button.bottom {
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+
+.row .btn.btn-sm {
+    padding: 2px 5px;
+    font-size: 0.7rem;
+} 
+
+
+select.input-control {
+    background-color: white;
+    color: black;
+    cursor: pointer;  
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+.lightBorder {
+    border: solid 1px rgb(0,0, 0.123);
+}
+
+
+
+.modal-footer .btn {
+    margin-left: 5px;
+    
+    margin-right: 5px;
+}
+
+
+.btn.btn-primary {
+    background-color: rgb(22, 151, 151);
+}
+
+.btn-tiny {
+    font-size: 0.75rem !important;
+}
+  
+.drop-down-icon:after {
+    content: "";
+    display: inline-block;
+    padding-top: 15px;
+    margin-left: -20px;
+    border-style: solid;
+    border-width: 0.4em 0.4em 0 0.4em;
+    border-color: #999 transparent transparent transparent;
+    margin-top: 0.7em;
+}
+
+
+.reading-not-available {
+    color: red;
+}
+
+
+.clear-right {
+    clear:right;
+}
+
+
+.clear-left {
+    clear:left;
+}
+
+
+.nav-item {
+    cursor: pointer;
+}
+
+.nav-tabs .nav-link {
+ 
+  border: solid 1px rgba(0,0,0, 0.125);
+  margin-left: 1px;
+ 
+}   
+
+
+.nav-tabs .nav-link.active {
+ 
+    border-bottom:  solid 1px transparent;
+    margin-left: 1px;
+    font-size: 0.98em;
+  }  
+  
+
+.nav-tabs.nav-link:hover {
+
+border: solid 1px lightslategray;
+
+}  
+
+.pd5 {
+    padding:5px;
+}
+
+
+
+.pd10 {
+    padding:10px;
+}
+
+.card-title.pageHeader{
+    background-color : 74C0C2;
+    color: white;   
+}
+
+
+/* When the listgroup is rendered inside tableItem set the inimal padding */
+.tableList .list-group-item {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+
+}
+
+
+/*Field Label */
+.fieldLabel {
+    font-size: 0.85em; 
+   /* font-weight: 700; */
+    color: slategrey;
+}
+
+label {
+    margin-bottom: 0.25em;
+}
+
+.flat-border {
+    border-radius: 0px !important;
+}
+
+.list-group-item.header  {
+    
+    color:  slategrey;
+    font-weight: lighter;
+    background-color: aliceblue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.fieldValue {
+    padding-left: 5px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+} 
+
+
+
+.mgLeft10 {
+    margin-left: 10px;
+}
+
+.pdLeft15 {
+    padding-left: 15px !important;
+}
+
+.pdLeft20 {
+    padding-left: 20px !important;
+}
+
+.modal-dialog-small {
+    width : 400px;
+    height: 450px;
+}
+
+
+
+
+.pdTop5{
+    padding-top: 5px;
+}
+
+.ticket-dialog .modal-footer  {
+    border-top:none;
+}
+.pd15 {
+    padding: 15px !important;
+}
+
+
+.modal-dialog{
+    width: 400px;
+    height: 450px;
+}
+
+
+.ht350 {
+    height: 350px;
+}
+
+
+.modal-body.small-dialog {
+    
+    height: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow:auto;
+}
+
+.form-control {
+    /* padding: .150rem .300rem;
+    font-size: 0.98em; */
+} 
+
+
+.themeBackground {
+    background-color: rgb(245, 254, 255);
+}
+
+.ht400{
+    height: 400px;
+}
+
+.ht320{
+    height: 300px;
+}
+
+.modal-footer>* {
+    margin: 0px;
+}
+
+
+.nogutters {
+    padding:0px !important;
+    margin:0px !important;
+}
+
+
+.minHeight450 {
+    min-height: 450px;
+}
+
+.minHeight400 {
+    min-height: 400px;
+}
+
+.pdTop10 {
+    padding-top: 10px;
+}
+
+
+.form-table .row .field {
+
+    /* To adjust inline with other form contorls */
+    padding-top: 10px !important;
+}
+
+.pdRight5 {
+    padding-right: 5px;
+
+}
+
+.mgLeft0{
+    margin-left: 0px;
+}
+
+.pdBottom20{
+    padding-bottom: 20px;
+}
+
+.pd15{
+    padding:15px;
+}
+
+.pdLeft20{
+    padding-left: 20px;
+}
+
+.loadingProgress
+.pdLeft5 {
+    padding-left: 5px;
+}
+
+.pdLeft5 {
+    padding-left: 5px;
+}
+
+.mgTop35 {
+    margin-top:35px;
+}
+
+.dark-header {
+    background-color:  cadetblue;
+    color:white;
+}
+
+.modal-header {
+    padding: 0.6rem;
+}
+
+
+.modal-title {
+    margin-bottom: 0;
+    /* border: solid 1px rgba(0,0,0,.2); */
+    line-height: 1.5;
+    /* padding: 5px; */
+    margin: 2px;
+    /* color: white; */
+    /* padding-left: 15px; */
+    /* background-color: #4bb0b4; */
+}
+
+.plainBackground {
+    border: solid 1px transparent;
+    background-color: unset;
+}
+
+.modal-body {
+    padding: 0.75rem;
+}
+
+.modal-footer {
+    padding: 0.2rem;
+    margin: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    justify-content: inherit;
+}
+
+.modaldialogSmall {
+    width: 350px;
+    min-height: 400px;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.btn:hover {
+    background-color: powderblue;
+    color:black;
+}
+
+.nav-pills {
+    /*background-color: aliceblue;*/
+    /*border: solid 1px rgba(0, 0, 0, 0.125);*/
+    /* No border for bottom */
+    /*border-bottom: solid 1px lightblue; */
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link.sidemenu {
+    color: black;
+    border-right: solid 1px lightblue;
+    border-bottom: solid 1px lightblue;
+}
+
+.nav-link  {
+  
+}
+
+.nav-link.active  { 
+    /* font-weight:  bold;*/
+  
+    /*border-bottom : 3px solid dodgerblue !important;
+    color: dodgerblue !important;*/
+    /*color: dodgerblue !important; */
+    font-size: 0.98em;
+    color:dodgerblue !important;
+    font-weight: bold; 
+    background-color: white !important;
+    border-top-right-radius: 5px !important;
+    border-top-left-radius: 5px !important;
+    border-left: solid 1px lightgray !important;
+    border-right:solid 1px lightgray !important;
+    border-top:solid 1px lightgray !important;
+  
+}
+
+
+.sidemenu.nav-link.active  {
+    
+    background-color: aliceblue !important;    
+}
+
+
+.sidemenu.nav-link  {
+    
+    background-color: white !important;
+}
+
+.pd2 {
+    padding: 2px;
+}
+
+
+.border-all {
+    border: solid 1px lightgray;
+}
+
+
+
+.nav-pills .nav-link {
+    border-radius: 0;   
+}
+
+.nav-item  {
+    border-right: solid 1px rgba(0,0,0,0.23);
+     margin-top: 2px;
+    margin-bottom:2px; 
+}
+
+
+
+
+
+.mgBottom25 {
+    margin-bottom: 25px;
+}
+
+
+
+.badge.big.info {
+    font-size: 85%;
+    background-color: aliceblue;
+}
+/* 
+.badge.error {
+    background-color: red; 
+    color: white;
+}
+
+.badge.warning {
+    background-color: orange; 
+}
+ */
+
+.success {
+    color: rgb(8, 151, 8); 
+    font-weight: bold;
+}
+
+.bold {
+   font-weight: bold;
+   font-size: 0.75rem;
+}
+
+
+.bold.small {
+    font-size: 0.8em; 
+}
+
+.failure {
+    color: red; 
+}
+
+
+.info {
+    color: dodgerblue; 
+}
+
+.wd2000 {
+    width:2000px;
+}
+
+.wd500 {
+    width:500px !important;
+}
+
+.textSmall{
+    font-size: 12px;
+}
+
+.wd2300 {
+    width:2000px;
+   
+}
+.scrollable {
+    overflow:auto;
+}
+
+.ht400 {
+    height: 410px;
+}
+
+
+.header {
+    font-size:0.9em;
+   
+    background-color: aliceblue;
+    color: black;     
+}
+
+
+.wd950 {
+    /* 5 columns: 150 *5, assignee: 200 */
+    width: 1000px;
+}
+/* Calender task */
+.calendarTicket 
+{	border-style: solid; 
+	font-size: 12px;
+	border: 0.5px solid lightgray;
+    padding: 3px;
+  	border-radius: 2px;
+    margin: 3px;
+}
+
+
+.wd200 {
+    width:  200px;
+}
+
+
+
+
+.wd150 {
+    width:  150px;
+}
+
+
+.calendarTicket.gray {
+background-color: #e6e6e6;
+}
+
+.calendarTicket.red {
+background-color: #ffb3b3;
+}
+
+.calendarTicket.green {
+background-color: #ccffcc;
+}
+
+.brdTopBottom {
+    border-top: solid 1px lightgray;
+    border-bottom: solid 1px lightgray;
+}
+
+
+.brdTop {
+    border-top: solid 1px lightgray;
+}
+
+.brdRight {
+    border-right: solid 1px lightgray;
+}
+
+
+
+.brdLeft {
+    border-left: solid 1px lightgray;
+}
+
+
+.link {
+    cursor: pointer;
+}
+
+.filter-dialog  {
+    padding: 5px;
+    width: 700px;
+    max-width:710px;
+}
+
+
+
+
+.ticket-dialog .tab-content {
+    
+    height: 340px;
+    /* height: 450px; */
+}
+
+.ticket-dialog-small {
+   width: 600px;
+   max-width: 610px;
+   
+}
+
+.noteHeader {
+    padding: 0.25rem;
+    padding-left: 0.40rem;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    font-size: 11px;
+    
+    color: slategrey;
+    background-color: rgba(0,0,0,.05);
+}
+
+.margin-bottom-10{
+    margin-bottom:  10px;
+}
+
+.themeIcon {
+    /* user the color of the theme and background */
+    color: lightslategrey;
+    
+}
+
+
+.section .row {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.ht150 {
+    height:150px;
+}
+
+
+.is-invalid.field {
+    border: solid 1px #dc3545;
+}
+
+
+.form-check-input {
+    margin-top: 0.2rem;
+}
+
+
+.warning {
+    color: orange;
+}
+
+
+.failure {
+    color: red;
+}
+
+
+.secondary {
+    color: gray;
+}
+
+.slaStatusMsg {
+    font-weight: bold;
+   font-size: 0.85em;
+}
+
+
+.contractStatusMsg {
+   font-weight: bold;
+   font-size: 0.85em;
+}
+
+.minHt420 {
+    min-height: 450px;
+}
+
+/* Multi select dropdown customization */
+.dropdown .btn {
+    border:  1px solid #ced4da;
+    color: inherit;
+    background-color: white;
+    padding: 0.25em 0.5em;
+}
+
+/* Multi select dropdown Options */
+.dropdown .dropdown-item {
+   font-size: 0.85em;
+}
+
+/* The multiselcet dropdown arrow */
+.dropdown-toggle::after {
+    margin-top: 0.50em;
+    margin-right: 0.3em;
+    vertical-align: 0.5em;
+}
+
+.pdTop30{
+    padding-top: 30px;
+}
+
+.pdTop15 {
+    padding-top: 15px;
+}
+
+.list-group .border-all {
+    border-top: none;
+}
+
+.mgLeft15 {
+    margin-left: 15px;
+}
+
+
+
+/* When the listgroup is rendered inside tableItem set the inimal padding */
+.tableList .list-group-item {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.card-body.legend{
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+}
+
+.card-body.legend .card-title{
+    margin-bottom:0.2em;
+}
+
+
+.p.card-text .legendValue {
+    line-height: 1;
+}
+
+.card-body .legendValue{
+    font-size: 1.15em;
+    font-weight :bold;
+}
+
+
+.dashBoardWidget {
+    /* Outer border */  
+    border: 1px solid rgba(0,0,0,.125);
+    padding: 20px;
+    margin: 10px;
+}
+
+.dashBoardWidget .header {
+    font-weight: bold;
+    padding-top: 5px;
+    background-color: white;
+    padding-bottom: 5px;
+}
+
+
+.coursestatus.notstarted {
+    color: blue;
+} 
+
+.coursestatus.cancelled {
+    color: red;
+}
+
+.coursestatus.inprogress {
+    color: purple;
+}
+
+
+.coursestatus.referback {
+    color: darkgoldenrod;
+}
+
+.coursestatus.completed {
+    color: darkgreen;
+}
+
+.center-wd300 {
+    margin: auto;
+    width: 400px;
+    border: 1px solid lightblue;
+    padding: 10px;
+    margin-top: 20px;
+    
+  }
+
+
+.colorwhite {
+    color:white;
+}
+  
+
+.bklightblue { 
+    background-color: aliceblue;
+}
+
+
+.wd400 {
+    width: 400px;
+}
+
+.applicationError {
+    padding:  40px;
+}
+
+.page-link {
+    font-weight: bold;
+}
+
+h5.modal-title {
+    font-size: 1.05rem;
+}
+
+.smallListItem {
+    font-size: 90%;
+} 
+
+.ht300 {
+    height: 300px;   
+}
+
+.titleBar a {
+  /*   color: white; */
+}
+
+.profilePhoto {
+    width: 300px;
+    height: 300px;
+    border :solid 1px black;
+}
+
+
+.certificate {
+    width: 500px;
+    height: 500px;
+    border :solid 1px black;
+}
+
+
+.titleImg {
+    width: 80px;
+    height: 80px;
+}
+
+.pdTop30 {
+    padding-top:  30px;
+}
+
+/* 23/05/22: Fix to add a wordwrap */
+.row [class*="col-"] {
+    white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+    white-space: -webkit-pre-wrap;          /* Chrome & Safari */ 
+    white-space: -pre-wrap;                 /* Opera 4-6 */
+    white-space: -o-pre-wrap;               /* Opera 7 */
+    white-space: pre-wrap;                  /* CSS3 */
+    word-wrap: break-word;                  /* Internet Explorer 5.5+ */
+    word-break: break-all;
+    white-space: normal;
+}
+
+/* 
+.dropdown-menu.multiselect {
+    max-height:  100px;
+    overflow: auto;
+} */
+
+
+.card {
+    border-radius: 0.5rem !important;
+    padding: 15px;
+} 
+
+.bckGray {
+   background-color:  rgba(0,0,0,.05) !important;
+  
+} 
+
+
+
+ 
+.MuiButton-containedPrimary {
+    background-color: teal !important;
+    color: white;
+}
+
+
+
+
+.badge {
+    color: white;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: dodgerblue;
+}
+
+.green {
+    color: green;
+}
+
+.purple {
+    color: purple;
+}
+
+
+.lg {
+    font-size: 1.0rem !important;
+    font-weight: bold;
+ 
+}
+
+.big {
+    font-size: 0.95rem !important;
+    font-weight: bolder;
+   
+}
+
+
+.normal {
+       font-weight: normal;
+   
+}
+
+.MuiButton-root {
+    text-transform: capitalize !important;
+    font-weight: bolder !important;
+}
+
+.card-title {
+    padding: 0px;;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+
+.pd100 {
+    padding:100px;
+}
+
+.col  {
+
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.fieldset .row {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+
+.row  [class*="col-"]  {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.navmenubar .navlink{
+    border-right: solid 2px white; 
+  
+    color: white;
+   
+}
+
+.nav-item {
+    border: none;
+}
+
+.subHeading {
+    padding-bottom: 5px;
+    border-bottom: solid 1px lightgray;
+    text-transform: capitalize;
+    font-size: 0.90rem;
+    color: gray;
+}
+
+.nav-tabs .nav-link {
+    color: inherit;
+}
+ 
+
+.tab-content {
+    border-left: solid 1px #e9ecef;
+    border-right: solid 1px #e9ecef;
+    border-bottom: solid 1px #e9ecef;
+
+    min-height: 350px;
+    padding: 20px;
+    
+}
+
+.MuiStepConnector-line
+{
+    border-left-width: 2px !important;
+   
+}
+
+ 
+.colorgray {
+    color: gray;
+}
+
+.card .title {
+    font-size: 1.05em;
+    color: gray;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+}  
+
+.subtitle {
+    font-size: 0.9rem;
+    color: gray;
+      
+    font-weight:500;
+}
+
+.card .subtitle { 
+   
+    font-weight:500;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+    padding-bottom: 15px;
+}  
+
+
+
+.block {
+    font-size: 1.05rem;
+    font-weight: bold
+}
+
+.link {
+    cursor: hand;
+    font-size: 0.98em;
+    font-weight: bold;
+   
+}
+
+.link:hover {
+    cursor: hand;
+    font-size: 1.2em;
+}
+
+.float-left {
+    float:left;
+}
+
+
+.float-right {
+    float: right
+}
+
+.clear {
+    clear: both;
+}
+
+.max-w-30p {
+    max-width: 30%;
+}
+ 
+.min-w-20p {
+    min-width: 20%;
+}
+
+.outline  {
+    font-size: 0.75rem;
+    font-weight: 100;
+    padding: 4px;
+    border-radius: 5px;
+    border:  solid 1px black;
+}
+
+.outline.danger {
+    color: red;
+    border-color: red;
+}
+ 
+  
+.outline.secondary {
+    color: gray;
+    border-color: gray;
+}
+
+.outline.success {
+    color: green;
+    border-color:green;
+}
+
+.linkitem {
+    cursor: pointer !important;
+}
+
+.blue {
+    color: dodgerblue;
+    
+}
+/* 
+
+ /* Override the default Button Dropdwown styles of bootstrap for the color flavor */
+/* .dropdown-toggle.btn.btn-success {
+    color:green;
+    border: solid 1px green !important;
+  
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top:  5px;
+    padding-bottom: 5px;
+    border-radius: 5px;  
+} 
+ 
+.show .dropdown-toggle.btn.btn-success {
+    color: green;
+    background-color: transparent;
+} */
+
+.btn-sm {
+    font-size: 0.8rem;
+}
+
+
+.form-control {
+    font-size: 0.9rem;
+}
+option {
+    font-size: 0.8rem;
+}
+
+
+
+
+/* Small font size for buttons in status bar */
+.statusbar .btn {
+    font-size: 0.7rem;;
+}
+
+
+/*  Override the default behaviour of button hover */
+ .statusbar .btn.disabled:hover {
+    color:gray;
+    background-color: inherit;
+}
+
+.btn-white {
+    background-color: white;
+}
+
+/*  For status, we need to have the active color highlighted even for disabled stats
+By default, disabled will not have tha. SO override that */
+.statusbar .btn.active.disabled {
+ 
+    color:white;
+    background-color:#6c757d;
+}
+
+
+.btn.btn-outline-teal {
+    color: teal;
+    border: solid 1px teal;
+    border-radius: 5px;
+}
+
+
+
+.btn.togglebtn.active {
+    box-shadow: inset -2px -2px 2px teal;
+    background-color: white !important;
+    color: black !important;
+}
+
+.btn {
+    font-size: 0.8rem;;
+} 
+
+.btn.btn-outline-teal.active {
+   
+    background-color: teal;
+    color: white;
+  
+}
+
+.minheight300 {
+    min-height: 300px;
+} 
+
+.no-border {
+    border: none;
+}
+
+
+.nav-tabs .nav-link {
+    border-bottom: none;
+}
+
+.pd30{
+    padding: 30px;
+    margin: 30px;
+}
+
+.multiselect.multiselect-options
+{
+    overflow:scroll;
+    min-width: 280px;
+}
+
+.pagination.pagination-sm
+{
+    margin-bottom: 0px;;
+}
+
+.ratingSmall {
+    font-size:0.6rem;
+}
+
+.mdleft10 {
+    margin-left: 10px;
+}
+
+.MuiOutlinedInput-input{
+    padding: 0.5rem !important; 
+}
+
+.smallmultiselect .multiselect-selected-text{
+   min-width: 120px !important; 
+   max-width: 120px !important; 
+   text-overflow: ellipsis;
+}
+
+.pl-20 {
+    padding-left: 30px;
+}
+
+.homepageimg {
+    width:150px;
+    height:150px;
+} 
+ 
+
+.recommendedJob {
+    background-color: #c97d7d;
+    background:radial-gradient(circle at 1.3% 2.8%, rgb(239, 249, 249) 0%, rgb(211, 215, 221) 100.2%); 
+   /* background: radial-gradient(circle at 2.0% 2.8%, rgb(255, 255, 209) 0%, rgb(200, 215, 221) 100.2%) */
+}
+
+.pageButton {
+
+    background-color: lightblue;
+    margin-top:  35px;
+   height: 25px;
+    width: 35x;
+} 
+  
+
+.big {
+    font-size: 16px;
+}
+
+.allBorder {
+    border: solid 1px gray;
+    border-radius: 10px;
+}
