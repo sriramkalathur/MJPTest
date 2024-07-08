@@ -57,6 +57,11 @@ namespace MJP.Entities.Models
         [JsonProperty("courseName")]
         public string CourseName { get; set;}
 
+
+        [Required(ErrorMessage = "Grade is required")]
+        [JsonProperty("grade")]
+        public string Grade { get; set;}
+
         [Required(ErrorMessage = "Course Completion Certificate is required")]
         [JsonProperty("certificateNumber")]
         public string CertificateNumer { get; set; }

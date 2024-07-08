@@ -51,7 +51,7 @@ namespace MJP.Infrastructure
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                //optionsBuilder.UseSqlServer("server=DESKTOP-P5MKLND\\SQLEXPRESS;database=MJP;Trusted_Connection=True;Integrated Security=true;");
+                //optionsBuilder.UseSqlServer("server=(localdb)\\MSSQLLocalDB;database=MJP;Trusted_Connection=True;Integrated Security=true;");
                 optionsBuilder.UseSqlServer(MJPContext.ConnectionString);
             }
         }
@@ -175,7 +175,11 @@ namespace MJP.Infrastructure
 
                 entity.Property(e => e.ExpectedSalary).HasColumnType("decimal(18, 0)");
 
-                entity.Property(e => e.Experience).HasColumnType("decimal(18, 1)");
+                entity.Property(e => e.Experience)
+                    .IsRequired()
+                    .HasMaxLength(25)
+                    .IsUnicode(false)
+                    .HasComputedColumnSql("(concat(isnull([ExperienceYrs],(0)),'.',isnull([ExperienceMonths],(0))))", false);
 
                 entity.Property(e => e.FatherName)
                     .HasMaxLength(100)
@@ -264,6 +268,10 @@ namespace MJP.Infrastructure
 
                 entity.Property(e => e.Details)
                     .HasMaxLength(200)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Grade)
+                    .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.IssueDate).HasColumnType("datetime");
@@ -458,7 +466,7 @@ namespace MJP.Infrastructure
                 entity.ToTable("CompetencyCertificates", "administration");
 
                 entity.Property(e => e.Board)
-                    .HasMaxLength(100)
+                    .HasMaxLength(200)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Cocnumber)

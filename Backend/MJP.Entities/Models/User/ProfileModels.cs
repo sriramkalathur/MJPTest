@@ -120,21 +120,21 @@ namespace MJP.Entities.Models
         public int? NationalityId { get; set; }
 
 
-        [Required(ErrorMessage = "Annual Salary is required")]
+        //[Required(ErrorMessage = "Annual Salary is required")]
         [JsonProperty("annualSalary")]
         public decimal? AnnualSalary { get; set; }
 
-        [Required(ErrorMessage = "Currency is required")]
+        //[Required(ErrorMessage = "Currency is required")]
         [JsonProperty("salaryCurrencyId")]
         public int? AnnualSalaryCurrencyId { get; set; }
 
 
 
-         [Required(ErrorMessage = "Expected Salary is required")]
+        //[Required(ErrorMessage = "Expected Salary is required")]
         [JsonProperty("expectedSalary")]
         public decimal? ExpectedSalary { get; set; }
 
-        [Required(ErrorMessage = "Currency is required")]
+        //[Required(ErrorMessage = "Currency is required")]
         [JsonProperty("expectedCurrencyId")]
         public int? ExpectedSalaryCurrencyId { get; set; }
        
@@ -191,10 +191,21 @@ namespace MJP.Entities.Models
 
 
         
-        [Required(ErrorMessage = "Experience is required")]
-        [JsonProperty("experience")]
-        public decimal? Experience { get; set; }
+        //[Required(ErrorMessage = "Experience is required")]
+        [Range(minimum: 0, maximum: 99, ErrorMessage = "Should be between 0-99")]
+        [JsonProperty("experienceYrs")]
+        public int? ExperienceYrs { get; set; }
  
+
+        //[Required(ErrorMessage = "Experience is required")]
+        [Range(minimum: 0, maximum: 12, ErrorMessage = "Should be between 0-12")]
+        [JsonProperty("experienceMonths")]
+        public int? ExperienceMonths { get; set; }
+
+         [JsonProperty("experience")]
+        public string Experience { get; set;}
+
+
         ///Indicates whether the personal data is updated in profile
          [JsonProperty("isPersonalInfoCompleted")]
         public bool IsPersonalInfoCompleted { get; set; }

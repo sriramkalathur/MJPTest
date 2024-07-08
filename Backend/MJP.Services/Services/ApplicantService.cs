@@ -15,6 +15,7 @@ using MJP.Entities;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore.Scaffolding;
 using Renci.SshNet.Security;
+using System.Reflection.Metadata;
 
 
 namespace MJP.Services
@@ -137,7 +138,8 @@ namespace MJP.Services
                 result.ExpectedSalaryCurrencyId = dbModel.ExpectedSalaryCurrencyId;
                 
                 result.RankId = dbModel.RankId;
-                result.Experience = dbModel.Experience;
+                result.ExperienceYrs = dbModel.ExperienceYrs;
+                result.ExperienceMonths = dbModel.ExperienceMonths??0;
 
                 if (!result.PermanentAddressSameAsCurrent)
                 {
@@ -168,7 +170,8 @@ namespace MJP.Services
             dbItem.Nationality = model.NationalityId;
             dbItem.DateOfBirth = model.DateOfBirth;
             dbItem.FatherName = model.FatherName;
-            dbItem.Experience = model.Experience;
+            dbItem.ExperienceYrs = model.ExperienceYrs;
+            dbItem.ExperienceMonths = model.ExperienceMonths;
 
             dbItem.TechnicalQualification = model.TechnicalQualification;
             dbItem.EducationalQualification = model.EducationalQualification;
@@ -185,7 +188,8 @@ namespace MJP.Services
             //dbItem.SalaryCurrencyId = model.SalaryCurrencyId;
             dbItem.RankId = model.RankId;
 
-            dbItem.Experience = model.Experience;
+            dbItem.ExperienceYrs = model.ExperienceYrs;
+            dbItem.ExperienceMonths = model.ExperienceMonths;
             dbItem.AlternateContactNumber = model.AlternateContactNumber;
             dbItem.AlternateEmail = model.AlternateEmail;
           
@@ -375,7 +379,10 @@ namespace MJP.Services
             List<ValidationError> errors = new List<ValidationError>();
             //Validate if the documentType already exist
             int count = 0;
-            if(model.ApplicantDocumentId == 0) {
+
+            // Jul 07 2024: As per the chat from Densingh, user can have different 
+            // docunment with the same document type. So that validation is removed
+            /* if(model.ApplicantDocumentId == 0) {
                 //New item. Check if document with the same type exists
                 count = this.context.ApplicantDocuments.Count((doc) => doc.ApplicantId == model.ApplicantId
                     && doc.DocumentTypeId == model.DocumentTypeId);
@@ -386,7 +393,7 @@ namespace MJP.Services
                 count = this.context.ApplicantDocuments.Count((doc) => doc.ApplicantId == model.ApplicantId
                     && doc.DocumentTypeId == model.DocumentTypeId &&
                     doc.ApplicantDocumentId != model.ApplicantDocumentId);
-            }
+            } */
             if(count > 0){
                 //There is a duplicate item
                 errors.Add(new ValidationError(){

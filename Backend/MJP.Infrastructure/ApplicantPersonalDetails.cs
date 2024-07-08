@@ -20,7 +20,9 @@ namespace MJP.Infrastructure
         public int? VesselTypeId { get; set; }
         public int? DepartmentId { get; set; }
         public int? RankId { get; set; }
-        public decimal? Experience { get; set; }
+        public int? ExperienceYrs { get; set; }
+        public int? ExperienceMonths { get; set; }
+        public string Experience { get; set; }
         public decimal? AnnualSalary { get; set; }
         public int? AnnualSalaryCurrencyId { get; set; }
         public decimal? ExpectedSalary { get; set; }

@@ -1,1 +1,1 @@
-dotnet ef dbcontext scaffold "server=DESKTOP-P5MKLND\SQLEXPRESS;database=MJP;Trusted_Connection=True;Integrated Security=true;" Microsoft.EntityFrameworkCore.SqlServer --force --no-pluralize  
+dotnet ef dbcontext scaffold "server=(localdb)\MSSQLLocalDB;database=MJP;Trusted_Connection=True;Integrated Security=true;" Microsoft.EntityFrameworkCore.SqlServer --force --no-pluralize  

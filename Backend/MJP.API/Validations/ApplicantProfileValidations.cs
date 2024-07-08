@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Components.Forms;
 using DocumentFormat.OpenXml.Wordprocessing;
+using System.Linq;
 
 namespace MJP.API.Validations
 {
@@ -43,6 +44,26 @@ namespace MJP.API.Validations
             AddRequiredValidation(errors, address.Pincode, $"{parentFieldName}.Pincode", "Pincode is required" );
         }
 
+        private static ValidationError[] ValidateSalary(ApplicantPersonalInfo model)
+        {
+            List<ValidationError> errors = new List<ValidationError>();
+            if(model.ExpectedSalary.HasValue && model.ExpectedSalaryCurrencyId == null){
+                //Expected salary is give but currencynot given
+                 errors.Add(new ValidationError(){
+                    ErrorMessage ="Currency is required",
+                    FieldName= "ExpectedSalaryCurrencyId"
+                });
+            }
+             if(model.AnnualSalary.HasValue && model.AnnualSalaryCurrencyId == null){
+                //Expected salary is give but currencynot given
+                 errors.Add(new ValidationError(){
+                    ErrorMessage ="Currency is required",
+                    FieldName= "AnnualSalaryCurrencyId"
+                });
+            }
+            return errors.ToArray();
+        }
+
         public static ValidationError[] ValidatePersonalInfo(ApplicantPersonalInfo model){
 
             List<ValidationError> errors = new List<ValidationError>();
@@ -61,6 +82,15 @@ namespace MJP.API.Validations
                     FieldName= "DateOfBirth"
                 });
             }
+            if((model.ExperienceYrs == 0 || model.ExperienceYrs == null) && model.ExperienceMonths == 0)
+            {
+                //Future date
+                errors.Add(new ValidationError(){
+                    ErrorMessage ="Experience is required",
+                    FieldName= "ExperienceYrs"
+                });
+            }
+            errors.AddRange(ValidateSalary(model));
            return errors.ToArray();
         }
     }

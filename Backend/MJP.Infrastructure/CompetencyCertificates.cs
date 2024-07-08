@@ -14,8 +14,8 @@ namespace MJP.Infrastructure
         public string Details { get; set; }
         public string Grade { get; set; }
         public string Board { get; set; }
-        public string YearOfPassing { get; set; }
         public string Institution { get; set; }
+        public string YearOfPassing { get; set; }
         public string LastUpdatedBy { get; set; }
         public DateTime? LastUpdatedTime { get; set; }
 

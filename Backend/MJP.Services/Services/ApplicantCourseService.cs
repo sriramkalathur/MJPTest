@@ -134,7 +134,8 @@ namespace MJP.Services
                             PlaceOfIssue = crse.IssuePlace,
                             Details = crse.Details,
                             IssueDate =crse.IssueDate,
-                            ExpiryDate = crse.ValidTill
+                            ExpiryDate = crse.ValidTill,
+                            Grade = crse.Grade
                         }).ToArray();
             return list;
         }
@@ -160,6 +161,7 @@ namespace MJP.Services
             dbItem.IssuePlace = model.PlaceOfIssue;
             dbItem.ValidTill = model.ExpiryDate;    
             dbItem.Details = model.Details;
+            dbItem.Grade = model.Grade;
 
             dbItem.LastUpdatedBy = model.LastUpdatedBy;
             dbItem.LastUpdatedTime = model.LastUpdatedTime;

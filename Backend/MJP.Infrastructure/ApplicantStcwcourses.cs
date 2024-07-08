@@ -11,6 +11,7 @@ namespace MJP.Infrastructure
         public int? ApplicantId { get; set; }
         public int? CourseId { get; set; }
         public string CertificateNumber { get; set; }
+        public string Grade { get; set; }
         public DateTime? IssueDate { get; set; }
         public string IssuePlace { get; set; }
         public DateTime? ValidTill { get; set; }
