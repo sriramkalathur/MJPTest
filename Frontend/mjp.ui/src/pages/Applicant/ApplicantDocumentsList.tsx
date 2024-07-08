@@ -86,15 +86,17 @@ export class ApplicantDocumentList extends React.Component<PropsModel, StateMode
     private renderDocument(doc: ApplicantDocument){
         return (<>
             <Row>
-                <Col xs="3">{ doc.documentName} </Col>
+                <Col xs="2-5">{ doc.documentName} </Col>
          
-                <Col xs="2-5">{ doc.documentNumber} </Col>
+                <Col xs="1-75">{ doc.documentNumber} </Col>
+
+                <Col xs="1-5">{ doc.grade} </Col>
            
                 <Col xs="1-5">{ CommonUtils.getDisplayDate(doc.issueDate) } </Col>
            
                 <Col xs="1-5">{ CommonUtils.getDisplayDate(doc.expiryDate) } </Col>
             
-                <Col xs="2-5">{ doc.issuePlace } </Col>
+                <Col xs="2-25">{ doc.issuePlace } </Col>
 
                 <Col xs="1">
                     <Button  outline size="sm"  color="teal" onClick= { (e) => this.showPopup(doc)}>
@@ -115,15 +117,17 @@ export class ApplicantDocumentList extends React.Component<PropsModel, StateMode
     private renderHeader(){
         return (<>
             <Row className="header">
-                <Col xs="3">Document</Col>
+                <Col xs="2-5">Document</Col>
            
-                <Col xs="2-5">Document Number</Col>
+                <Col xs="1-75">Document Number</Col>
+
+                <Col xs="1-5">Grade</Col>
             
                 <Col xs="1-5">Issue Date</Col>
            
                 <Col xs="1-5">Expiry Date</Col>
          
-                <Col xs="2-5">Issue Place</Col>
+                <Col xs="2-25">Issue Place</Col>
             </Row>
         </>);
     }

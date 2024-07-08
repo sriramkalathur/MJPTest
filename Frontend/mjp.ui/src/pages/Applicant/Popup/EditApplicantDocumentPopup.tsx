@@ -96,6 +96,12 @@ export class EditApplicantDocumentPopup extends React.Component<PropsModel, Stat
                     errorMessage={ this.formState.errors.documentNumber }
                     value = {this.formState.values.documentNumber} />
             </div>   
+            <div>
+                <TextBox  label="Grade"  fieldName="grade"
+                    onChange={ this.formState.handleChange } isMandatory={false}
+                    errorMessage={ this.formState.errors.grade }
+                    value = {this.formState.values.grade} />
+            </div>   
             <Row>
               <Col xs="6">
                 <DateField label="Issue Date"  fieldName="issueDate"

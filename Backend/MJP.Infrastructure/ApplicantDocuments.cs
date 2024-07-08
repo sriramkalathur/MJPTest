@@ -10,6 +10,7 @@ namespace MJP.Infrastructure
         public int ApplicantDocumentId { get; set; }
         public int? ApplicantId { get; set; }
         public int? DocumentTypeId { get; set; }
+        public string Grade { get; set; }
         public string DocumentName { get; set; }
         public string DocumentNumber { get; set; }
         public DateTime? IssueDate { get; set; }

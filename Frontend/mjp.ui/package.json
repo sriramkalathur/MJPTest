@@ -26,9 +26,9 @@
   },
   "scripts": {
     "serve": "webpack serve",
-    "start:dev": "env-cmd -f config.env.dev react-app-rewired start --watch ./node_modules/common/src",
+    "start:dev": "env-cmd -f config.env.dev react-app-rewired  start --watch ./node_modules/common/src",
     "start:prod": "env-cmd -f config.env.prod react-app-rewired start",
-    "build:prod": "env-cmd -f config.env.prod react-app-rewired --openssl-legacy-provider build",
+    "build:prod": "env-cmd -f config.env.prod react-app-rewired  build",
     "build:dev": "env-cmd -f config.env.dev react-app-rewired --openssl-legacy-provider build",
     "watch": "watch 'npm run start:dev' ./node_modules/src'",
     "test": "react-scripts test",

@@ -21,6 +21,11 @@ namespace MJP.Entities.Models
         [JsonProperty("documentName")]
         public string DocumentName { get; set;}
 
+
+          [JsonProperty("grade")]
+        public string Grade { get; set;}
+
+
         [Required(ErrorMessage = "Document number is required")]
         [JsonProperty("documentNumber")]
         public string DocumentNumber { get; set; }

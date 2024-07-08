@@ -106,7 +106,11 @@ export class PersonalInformation {
 
     rank: string;
 
-    experience?: number;
+    experienceYrs : number;
+
+    experienceMonths : number;
+
+    experience: number;
 
     //Annual salary
     annualSalary : number;
@@ -134,6 +138,8 @@ export class ApplicantDocument {
     documentName: string;
 
     documentNumber: string;
+
+    grade: string;
 
     issueDate: Date;
 

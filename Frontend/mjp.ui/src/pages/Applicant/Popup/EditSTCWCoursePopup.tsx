@@ -75,12 +75,12 @@ export class EditSTCWCoursePopup extends React.Component<PropsModel, StateModel>
                     options={this.props.courses}
                     displayMember="displayText" valueMember="itemId" />
            </div>
-           <div>
+           <Row>
                 <TextBox label="Certificate Number" fieldName="certificateNumber"
                     onChange={this.formState.handleChange} isMandatory={true}
-                    errorMessage={this.formState.errors.certificateNumber}
+                    errorMessage={this.formState.errors.certificateNumber} class="col-6"
                     value={this.formState.values.certificateNumber} />
-            </div>
+            </Row>
            
             <Row>
                 <Col xs="6">

@@ -204,7 +204,6 @@ export class JobPositionApply extends React.Component<PropsModel, StateModel> {
                             onChange={ this.formState.handleChange }
                             value={this.formState.values.salaryTo?.toString() }></TextBox>
 
-                        <span className="py-2 px-2">lacs</span>
                         </Row>
                     </Col>
                     

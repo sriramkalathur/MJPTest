@@ -538,6 +538,21 @@ export class EditPersonalInformation extends React.Component<PropsModel, StateMo
     }
 
 
+    private months = [
+        new ListItem(0, "0"),
+        new ListItem(1, "1"),
+        new ListItem(2, "2"),
+        new ListItem(3, "3"),
+        new ListItem(4, "4"),
+        new ListItem(5, "5"),
+        new ListItem(6, "6"),
+        new ListItem(7, "7"),
+        new ListItem(8, "8"),
+        new ListItem(9, "9"),
+        new ListItem(10, "10"),
+        new ListItem(11, "11"),
+    ]
+
     renderWorkInfo() {
 
         //Experience will be in months. Convert that to Months & days
@@ -553,7 +568,7 @@ export class EditPersonalInformation extends React.Component<PropsModel, StateMo
                     <Row>
                      <TextBox label="Current Annual Salary" fieldName="annualSalary" type="number"
                         errorMessage={this.formState.errors.annualSalary} class="col-6"
-                        onChange={this.formState.handleChange} isMandatory={true}
+                        onChange={this.formState.handleChange} isMandatory={false}
                         value={this.formState.values.annualSalary && this.formState.values.annualSalary.toString()} />
 
                     <DropdownList labelText="&nbsp;" fieldName="salaryCurrencyId"
@@ -570,7 +585,7 @@ export class EditPersonalInformation extends React.Component<PropsModel, StateMo
                     <Row>
                      <TextBox label="Expected Salary" fieldName="expectedSalary" type="number"
                         errorMessage={this.formState.errors.expectedSalary} class="col-6"
-                        onChange={this.formState.handleChange} isMandatory={true}
+                        onChange={this.formState.handleChange} isMandatory={false}
                         value={this.formState.values.expectedSalary && this.formState.values.expectedSalary.toString()} />
 
                     <DropdownList labelText="&nbsp;" fieldName="expectedCurrencyId"
@@ -593,14 +608,26 @@ export class EditPersonalInformation extends React.Component<PropsModel, StateMo
 
                 </Col> */}
             </Row>
-            <Row>
+          
                 <Col xs="6">
-                <TextBox label="Total Experience(yrs)" fieldName="experience" type="number"
-                        errorMessage={this.formState.errors.experience} class="col-8"
+                <Row>
+                <TextBox label="Total Experience" fieldName="experienceYrs" type="number"
+                        errorMessage={this.formState.errors.experienceYrs} class="col-5"
                         onChange={this.formState.handleChange} isMandatory={true}
-                        value={this.formState.values.experience as any} />
+                        value={this.formState.values.experienceYrs as any} />
+                <span className="px-1 py-4">yrs</span>
+                <DropdownList labelText="&nbsp;" fieldName="experienceMonths"
+                        onChange={this.formState.handleChange} addDefaultSelect={false}
+
+                        errorMessage={this.formState.errors.experienceMonths}
+                        value={this.formState.values.experienceMonths}
+                        options={this.months} class="col-4"
+                        displayMember="displayText" valueMember="itemId" />
+                   
+                <span className="px-1 py-4">months</span>
+                        </Row> 
                 </Col>
-             </Row>
+          
         </>);
     }
 

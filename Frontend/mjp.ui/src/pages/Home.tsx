@@ -20,7 +20,7 @@ export class Home extends React.Component {
     }
 
 
-    aboutText1 = "At Mariner Makers, we're all about crafting extraordinary sailing experiences for both seasoned and aspiring sailors!";
+    aboutText1 = "At Mariners Maker, we're all about crafting extraordinary sailing experiences for both seasoned and aspiring sailors!";
     aboutText2 = "🚢 Whether you crave offshore adventures, dream of joining the main fleet, or desire a memorable journey with top-notch cruise lines, we've got you covered.The institution is dedicated to deliver high quality maritime education, training and documentation to prepare it's sailors for a rewarding career in the shipping industry.  It provides best services to upcoming, current and retired Seafarers .";
 
     renderAbout() {
@@ -29,7 +29,7 @@ export class Home extends React.Component {
             <div>
 
                 <div className="py-3">
-                    <h4>🌊 Welcome to Mariner Makers ⚓ </h4>
+                    <h4>🌊 Welcome to Mariners Maker ⚓ </h4>
 
                     <div className="py-2">{this.aboutText1}
                         {this.aboutText2}
@@ -55,17 +55,17 @@ export class Home extends React.Component {
     renderAboutUs() {
         return (<>
             <h6>🌐 About Us </h6>
-            <div> At Mariner Makers, we grasp the unique needs and dreams of seafarers. With
+            <div> At Mariners Maker, we grasp the unique needs and dreams of seafarers. With
                 years of maritime industry expertise, we've forged robust global relationships with sailing
                 employers. Our passionate team is dedicated to helping sailors find their dream job or embark on
                 thrilling voyages through our cruise line partnerships. </div>
 
             <div className="py-3">  
                 Get Started Today! Ready to set sail on your career journey?
-            <a href="/register"> Join Mariner Makers now! </a>
+            <a href="/register"> Join Mariners Maker now! </a>
             Gain access to a world of tailored sailing opportunities, whether you're a fresh sailor or an
             experienced mariner seeking a change. Sign up to unlock your potential and sail towards an
-            exciting future with Mariner Makers! 🌟
+            exciting future with Mariners Maker! 🌟
                 </div>
         </>);
     }

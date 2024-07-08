@@ -96,7 +96,7 @@ export class EditSEAExperiencePopup extends React.Component<PropsModel, StateMod
                 <Row>
                 <Col xs="6">
                     <TextBox label="BHP" fieldName="bhp"
-                        onChange={this.formState.handleChange} 
+                        onChange={this.formState.handleChange} isMandatory={false}
                         errorMessage={this.formState.errors.bhp}
                         value={this.formState.values.bhp} />
                 </Col>

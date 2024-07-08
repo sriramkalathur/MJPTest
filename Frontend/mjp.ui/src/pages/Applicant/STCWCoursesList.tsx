@@ -92,11 +92,12 @@ export class STCWCoursesList extends React.Component<PropsModel, StateModel> {
         return (<>
             <Row>
                 <Col xs="4">{item.courseName} </Col>
-                <Col xs="2">{item.certificateNumber} </Col>
+                <Col xs="2-25">{item.certificateNumber} </Col>
+           
                 <Col xs="1-25">{CommonUtils.getDisplayDate(item.issueDate)} </Col>
                 <Col xs="1-25">{CommonUtils.getDisplayDate(item.expiryDate)} </Col>
 
-                <Col xs="2-5">{item.issuePlace} </Col>
+                <Col xs="2-25">{item.issuePlace} </Col>
                 <Col xs="1">
                     <Button outline size="sm" color="teal" onClick={(e) => this.showPopup(item)}>
                         <FaRegEdit />
@@ -117,11 +118,11 @@ export class STCWCoursesList extends React.Component<PropsModel, StateModel> {
         return (<>
             <Row className="header">
                 <Col xs="4">Course</Col>
-                <Col xs="2">Certificate Number</Col>
-              
+                <Col xs="2-25">Certificate No.</Col>
+           
                 <Col xs="1-25">Issue Date</Col>
                 <Col xs="1-25">Valid  Till</Col>
-                <Col xs="2-5">Issue Place</Col>
+                <Col xs="2-25">Issue Place</Col>
             </Row>
         </>);
     }

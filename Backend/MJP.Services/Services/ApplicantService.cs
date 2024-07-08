@@ -305,7 +305,8 @@ namespace MJP.Services
                         
                             IssueDate = doc.IssueDate,
                             ExpiryDate = doc.ExpiryDate,
-                            PlaceOfIssue = doc.IssuePlace
+                            PlaceOfIssue = doc.IssuePlace,
+                            Grade = doc.Grade
                         }).ToArray();
             return list;
         }
@@ -326,9 +327,11 @@ namespace MJP.Services
             dbItem.DocumentNumber = model.DocumentNumber;
             dbItem.DocumentTypeId = model.DocumentTypeId;
             dbItem.IssueDate = model.IssueDate;
+
             dbItem.IssuePlace = model.PlaceOfIssue;
             dbItem.ExpiryDate = model.ExpiryDate;
-
+            dbItem.Grade = model.Grade;
+            
             dbItem.LastUpdatedBy = model.LastUpdatedBy;
             dbItem.LastUpdatedTime = model.LastUpdatedTime;
 

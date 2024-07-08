@@ -52,6 +52,8 @@ export class STCWCourse {
 
     certificateNumber: string;
 
+    grade: string;
+
     issueDate: Date;
 
     issuePlace: string;

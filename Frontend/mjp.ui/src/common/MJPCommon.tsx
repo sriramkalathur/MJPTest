@@ -163,16 +163,13 @@ export const PageTitleActionBar = (props: {
 export const PageLoader = ((props : {
 	loadingMessage: string
 }) => {
-	
-	return (<Row className="px-2 py-5">
-		<Col>
-		<span className="px-3">
-		<CircularProgress/> 
-		</span>
-		<span className="py-1">
-		<h6>{ props.loadingMessage }</h6> 
-		</span>
+	return (<Row className="py-5">
+		<Col xs="5">
+
 		</Col>
-	
+		<Col xs="2" className="py-5">
+			<CircularProgress />
+			<h6>{ props.loadingMessage }</h6>
+		</Col>
 	</Row>);    
 });
